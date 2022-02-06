@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+        <title>Vibes</title>
+    </head>
+
+    <body>
+
+        <div id = "vibes" class = "vibes"></div>
+
+        <div class = "navbar">  
+
+            <div class = "navbar__title">JUST VIBES</div>
+
+            <div class = "navbar__options">
+                <div class = "navbar__options__option" id = "about--option">About</div>
+                <div class = "navbar__options__option" id = "visualArt--option">Visual Art</div>
+                <div class = "navbar__options__option" id = "manifesto--option">Manifesto</div>
+            </div>
+            
+        </div>
+
+        <div class = "navbar--accent"></div>
+
+        <!-- drop down information for topic options -->
+        <div class = "option-dropdown" id = "option-dropdown">
+
+            <!-- about ----------------------------------------------->
+            <div class = "about" id = "about--info">
+
+                
+
+                <div class = "about__def">
+
+                    <div id = "noun-content">
+                        <h1>Vibe (noun)</h1>
+                        <h3>A distinctive emotional atmosphere; sensed intuitively.</h3>
+                        <h3>"This website has a cool vibe."</h3>
+                    </div>
+
+                    <div id = "adjective-content">
+                        <h1>Vibe (verb)</h1>
+                        <h3>To connect with another person effortlessly, emotionally.</h3>
+                        <h3>"It's easy to vibe with friends"</h3>
+                    </div>
+
+                    <div id = "verb-content">
+                        <h1>Vibe (adjective)</h1>
+                        <h3>A relatable experience, particularly positive ones</h3>
+                        <h3>"Their attitude was a vibe"</h3>
+                    </div>
+
+                    <div class = "about__switcher" id = "switcher">
+                        <div class = "about__switcher__button" id = "noun"></div>
+                        <div class = "about__switcher__button" id = "adjective"></div>
+                        <div class = "about__switcher__button" id = "verb"></div>
+                    </div>
+
+                </div>
+
+                <div class = "about__description">
+                    <h3> Placeholder </h3>
+                </div>
+
+            </div>
+
+            <!-- visual art ------------------------------------------>
+            <div class = "about" id = "visualArt--info">
+
+                <div class = "about__pic">
+                    visual
+                </div>
+
+                <div class = "about__description"></div>
+                <div class = "switcher" id = "switcher"></div>
+
+            </div>
+
+            <!-- manifesto ------------------------------------------->
+            <div class = "about" id = "manifesto--info">
+
+                <div class = "about__pic">
+                    manifesto
+                </div>
+
+                <div class = "about__description"></div>
+                <div class = "switcher" id = "switcher"></div>
+
+            </div>
+
+
+        </div>
+        <!-- end drop down information -->
+
+        <!-- scripts -->
+        <script src="static/js/libraries/p5.min.js"></script>
+        <script src="static/js/vibes.js"></script>
+        <script src="static/js/switcher.js" type = "module"></script>
+        <script src="static/js/about.js" type = "module"></script>
+        <!-- end scripts -->
+
+    </body>
+
+</html>

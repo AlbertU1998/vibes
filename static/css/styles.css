@@ -1,0 +1,114 @@
+:root {
+    --text-color: rgb(122, 0, 255);
+    --text-color-fade: rgba(122, 0, 255, 0.5);
+    --bg-color: rgb(122, 220, 255);
+    --title-bg-font: 2em "Fira Sans", sans-serif;
+    --title-md-font: 1em "Fira Sans", sans-serif;
+    --button-font: 1em "Fira Sans", sans-serif;
+    --border-radius: 0.2em;
+}
+
+html, body {
+    margin: 0;
+    height: 100%
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.vibes {
+    margin: auto;
+}
+
+.navbar {
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+
+    justify-content: space-between;
+}
+
+.navbar__title {
+    margin-left: 0.5em;
+    color: var(--text-color);
+    font:  var(--title-bg-font);
+    font-weight: bold;
+    letter-spacing: 0.3em;
+}
+
+.navbar__options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar__options__option {
+    padding: 0.25em 0.5em;
+    margin: 0 0.5em;
+    color: var(--text-color);
+    font: var(--button-font);
+}
+
+.navbar__options__option:hover {
+    background-color: var(--text-color); 
+    color: var(--bg-color);
+    cursor: pointer;
+}
+
+.navbar--accent {
+    background-color: var(--text-color);
+    height: 10px; 
+}
+
+.option-dropdown{
+    height: 300px;
+    max-width: 1000px;
+    margin: 10px auto 0px;
+    padding: 0 20px;
+    border-radius: var(--border-radius);
+    background-color: var(--text-color);
+}
+
+.about {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.about__def {
+    width: 30%;
+
+    color: var(--bg-color);
+    font: var(--title-md-font);
+}
+
+.about__switcher {
+    display: inline-block;
+    margin: auto;
+}
+
+.about__switcher__button {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 1em solid var(--bg-color);
+    margin: 0 10px;
+
+    background-color: var(--bg-color);
+
+    cursor: pointer;
+}
+
+.about__description {
+    width: 50%;
+    height: 80%;
+    border-radius: var(--border-radius);
+
+    background-color: var(--bg-color);
+
+    text-align: center;
+}
