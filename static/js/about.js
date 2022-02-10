@@ -1,28 +1,19 @@
+//script to control the function of the about section on homepage
+
 const options = [ "noun", "adjective", "verb" ]
 
 const selectOption = (option) => {
-    console.log(option);
-    const button = document.getElementById(option);
-    button.style.backgroundColor = "rgb(122, 0, 255)";
-    button.style.border = "0.5em solid rgb(122, 220, 255)";
-
-    const content = document.getElementById(option + "-content");
-    content.style.display = "block";
+    document.getElementById(option).classList.add("about__switcher-selected");
+    document.getElementById(option + "-content").style.display = "block";
 }
 
 const unselectOption = (option) => {
-    const button = document.getElementById(option);
-    button.style.backgroundColor = "rgb(122, 220, 255)";
-    button.style.border = "0.5em solid rgb(122, 220, 255)";
-
-    const content = document.getElementById(option + "-content");
-    content.style.display = "none";
+    document.getElementById(option).classList.remove("about__switcher-selected");
+    document.getElementById(option + "-content").style.display = "none";
 }
 
-const switchOption = (el, ev) => {
-
+const switchOption = (el, _) => {
     options.map(option => unselectOption(option));
-
     selectOption(el.target.id);
 }
 

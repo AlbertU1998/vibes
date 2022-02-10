@@ -1,6 +1,23 @@
-var containerWidth = 0;
-var barWidth = 0;
+function extractColors(stringColor) {
+    const firstBrace  = stringColor.indexOf('(');
+    const firstComma  = stringColor.indexOf(' ', 1);
+    const secondComma = stringColor.indexOf(' ', firstComma + 1);
+    const thirdComma  = stringColor.indexOf(')', secondComma + 1);
+
+    const r = parseInt(stringColor.slice(firstBrace + 1, firstComma));
+    const g = parseInt(stringColor.slice(firstComma + 1, secondComma));
+    const b = parseInt(stringColor.slice(secondComma + 1, thirdComma));
+
+    return [r, g, b];
+}
+
+
+const bodyStyles = window.getComputedStyle(document.body);
+const bgColor = extractColors(bodyStyles.getPropertyValue('--bg-color'));
+const textColor = extractColors(bodyStyles.getPropertyValue('--text-color'));
+
 var barNumber = 0;
+var barWidth = 5;
 
 function signal(idx) {
     const amp = Math.sin(0.0025 * millis());
@@ -10,14 +27,12 @@ function signal(idx) {
 }
 
 function setup() {
-    containerWidth = document.getElementById('vibes').offsetWidth;
-    barNumber = containerWidth / 8;
-    barWidth = containerWidth / barNumber;
-    var cnv = createCanvas(containerWidth, 120).parent('vibes');
+    barNumber = windowWidth / barWidth;
+    var cnv = createCanvas(windowWidth, 120).parent('vibes');
 }
 
 function draw() {
-    background(122, 220, 255); fill(0);
+    background(bgColor); fill(0);
 
     const layers = 4;
     for(let layer = layers; layer > 0; layer--) {
@@ -27,16 +42,18 @@ function draw() {
             const [x, y] = [barWidth * idx, 0];
             const [w, h] = [1 * barWidth, 20 + 5 * s]
 
-            const color = 0 + (layer - 1) * 255 / layers
-            fill(122, color, 255, 200); stroke(122, 220, 255, 200);
+            const [r, g, b] = textColor.map((tc, i) => tc  + (layer - 1) * (bgColor[i] - tc) / layers)
+            fill(r, g, b); stroke(bgColor);
             rect(x, y, w, layer * h)
         }
     }
 }
 
 function windowResized() {
-    containerWidth = document.getElementById('vibes').offsetWidth;
-    barWidth = containerWidth / barNumber;
-    barNumber = containerWidth / 8;
-    resizeCanvas(containerWidth, 120);
+    barNumber = windowWidth / barWidth;
+    resizeCanvas(windowWidth, 120);
+}
+
+function changed() {
+    alert("woop")
 }

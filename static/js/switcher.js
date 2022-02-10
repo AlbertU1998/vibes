@@ -1,18 +1,16 @@
-const options = [ "about", "visualArt", "manifesto" ]
+const options = [ "about", "visualart", "manifesto" ]
 
 const selectOption = (option) => {
     const button = document.getElementById(option + "--option");
-    button.style.backgroundColor = "rgb(122, 0, 255)";
-    button.style.color = "rgb(122, 220, 255)";
+    button.classList.add("option-selected");
 
     const content = document.getElementById(option + "--info");
-    content.style.display = "flex";
+    content.style.display = "block";
 }
 
 const unselectOption = (option) => {
     const button = document.getElementById(option + "--option");
-    button.style.backgroundColor = "rgb(122, 220, 255)";
-    button.style.color = "rgb(122, 0, 255)";
+    button.classList.remove("option-selected");
 
     const content = document.getElementById(option + "--info");
     content.style.display = "none";

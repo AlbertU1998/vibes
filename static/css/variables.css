@@ -1,0 +1,25 @@
+:root {
+    --text-color: rgb(0 193 179);
+    --bg-color: rgb(0 90 112);
+
+    --title-bg-font: 2em "Fira Sans", sans-serif;
+    --title-md-font: 1em "Fira Sans", sans-serif;
+    --button-font: 1em "Fira Sans", sans-serif;
+    --border-radius: 0.7em;
+
+    --title-narrow-bg-font: 1em "Fira Sans", sans-serif;
+    --title-narrow-md-font: 0.5em "Fira Sans", sans-serif;
+    --button-narrow-font: 0.5em "Fira Sans", sans-serif;
+    --border-narrow-radius: 0.7em;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+
