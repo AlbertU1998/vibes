@@ -17,119 +17,126 @@
 
         <div class = "navbar">  
 
-            <div class = "navbar__title">JUST VIBES</div>
+            <a class = "navbar__title" href = "index.html">JUST VIBES</a>
 
             <div class = "navbar__options">
-                <div class = "navbar__options__option option-selected" id = "about--option">About</div>
-                <div class = "navbar__options__option" id = "visualart--option">Visual Art</div>
-                <div class = "navbar__options__option" id = "manifesto--option">Manifesto</div>
+                <a class = "navbar__options__option" href = "record.html">Record</a>
+                <a class = "navbar__options__option" href = "visualart.html">Visual Art</a>
+                <a class = "navbar__options__option" href = "manifesto.html">Manifesto</a>
             </div>
             
         </div>
 
         <div class = "navbar--accent"></div>
 
-        <div style = "padding: 10px;">
-            <!-- about ----------------------------------------------->
-            <div id = "about--info">
-                <div class = "about">
+        <!-- header ----------------------------------------------->
+        <div class = "dash">
+            <div class = "quote" onclick = "refreshQuote()">
 
-                    <div class = "about__content">
+                <div class = "quote__body" id = "quote-body"></div>
 
-                        <div id = "noun-content">
-                            <h1>Vibe (noun)</h1>
-                            <h3>A distinctive emotional atmosphere; sensed intuitively.</h3>
-                            <h3>"This website has a cool vibe."</h3>
-                        </div>
+                <div class = "quote__author" id = "quote-author"></div>
 
-                        <div id = "adjective-content">
-                            <h1>Vibe (verb)</h1>
-                            <h3>To connect with another person effortlessly, emotionally.</h3>
-                            <h3>"It's easy to vibe with friends"</h3>
-                        </div>
-
-                        <div id = "verb-content">
-                            <h1>Vibe (adjective)</h1>
-                            <h3>A relatable experience, particularly positive ones</h3>
-                            <h3>"Their attitude was a vibe"</h3>
-                        </div>
-
-                        <div class = "about__switcher">
-                            <div class = "about__switcher__button" id = "noun"></div>
-                            <div class = "about__switcher__button" id = "adjective"></div>
-                            <div class = "about__switcher__button" id = "verb"></div>
-                        </div>
-
-                    </div>
-
-                    <div class = "about__description">
-                        <h3> Placeholder </h3>
-                    </div>
-
-                </div>
             </div>
-            <!-- end about ------------------------------------------->
-
-            <!-- visual art ------------------------------------------>
-            <div id = "visualart--info">
-                <div class = "visualart">
-
-                    <div class = "visualart__centerpanel">
-
-                        <div class = "visualart__switch" id = "visualart-goleft">&lt;</div>
-
-                        <div class = "visualart__content">
-
-                            <div id = "fourier--content">
-                                <h3>fourier Placeholder</h3>
-                            </div>
-
-                            <div id = "lightening--content">
-                                <h3>lightening Placeholder</h3>
-                            </div>
-
-                            <div id = "inverse--content">
-                                <h3>inverse Placeholder</h3>
-                            </div>
-
-                        </div>
-
-                        <div class = "visualart__switch" id = "visualart-goright">&gt;</div>
-
-                    </div>
-
-                    <div class = "visualart__switcher">
-                        <div class = "visualart__switcher__button" id = "fourier"></div>
-                        <div class = "visualart__switcher__button" id = "lightening"></div>
-                        <div class = "visualart__switcher__button" id = "inverse"></div>
-                    </div>
-
-                </div>
-            </div>
-            <!-- end visual art -------------------------------------->
-
-            <!-- manifesto ------------------------------------------->
-            <div id = "manifesto--info">
-                <div class = "about">
-
-                    <div class = "about__pic">
-                        manifesto
-                    </div>
-
-                    <div class = "about__description"></div>
-                    <div class = "switcher" id = "switcher"></div>
-
-                </div>
-            </div>
-            <!-- end manifesto --------------------------------------->
         </div>
+        <!-- end header ------------------------------------------->
+
+        <!-- about ----------------------------------------------->
+        <div class = "__segment">
+
+            <div class = "__segment__title"> What is this?</div>
+
+            <br/>
+
+            <div class = "about__content">
+                <div class = "about__content__description" style = "width: 80%;">
+                    I used to use the word "vibe" ironically, 
+                    but I have come to realise that if the vibe
+                    is right, you'll be alright.
+                </div> 
+            </div>
+
+            <div class = "about__content">
+                <div class = "about__content__description">
+                    <b>The vibe may come from &nbsp; within yourself.</b>
+                    <br/><br/>
+                    <b>The vibe may be found in another.</b>
+                </div> 
+                <div class = "about__content__media">
+                    <img src = "assets/brain.png" height="80%"></img>
+                    <img src = "assets/friends.jpeg" height="50%"></img>
+                </div>
+            </div>
+            
+            <div class = "about__content">
+                <div class = "about__content__description" style = "width: 80%;">
+                    This is supposed to be a "portfolio" website, 
+                    but really, It's just a collection of things that pass
+                    the vibe check. check them out below.
+                </div> 
+            </div>
+
+        </div>
+        <!-- end about ------------------------------------------->
+
+        <!-- manifesto ------------------------------------------->
+        <div class = "__segment">
+
+            <div class = "__segment__title"> Manifesto</div>
+
+            <br/>
+
+            <div class = "manifesto__description" style = "width: 80%;">
+                The <i>Manifesto</i> is a a treatise into the ideas I have
+                concerning what an ideal world would look like.
+            </div> 
+
+            <br/><br/>
+
+            <div class = "manifesto__description">
+                It is based upon a streamlined set of axioms,
+                <br/>
+                hover to reveal!
+            </div>
+
+            <br/><br/>
+
+            <div class = "manifesto__axioms">
+
+                <img src = "assets/globe.png" class = "manifesto__axioms__img"></img>
+                
+                <div class = "manifesto__axioms__slider">
+                    <img class = "manifesto__axioms__slider__media" src = "assets/brain.png"></img>
+                    <div class = "manifesto__description">
+                        It will be a scien-tocracy.
+                    </div> 
+                </div>
+
+                <div class = "manifesto__axioms__slider">
+                    <img class = "manifesto__axioms__slider__media" src = "assets/brain.png"></img>
+                    <div class = "manifesto__description">
+                        It will be a scien-tocracy.
+                    </div> 
+                </div>
+                
+                <div class = "manifesto__axioms__slider">
+                    <img class = "manifesto__axioms__slider__media" src = "assets/brain.png"></img>
+                    <div class = "manifesto__description">
+                        It will be a scien-tocracy.
+                    </div> 
+                </div>
+            
+            </div>
+
+        </div>
+        <!-- end manifesto --------------------------------------->
+
+        <div style = "height: 300px;"></div>
 
         <!-- scripts -->
         <script src="static/js/libraries/p5.min.js"></script>
         <script src="static/js/vibes.js"></script>
-        <script src="static/js/switcher.js" type = "module"></script>
-        <script src="static/js/about.js" type = "module"></script>
-        <script src="static/js/visualart.js" type = "module"></script>
+        <script src="static/js/quotes.js"></script>
         <!-- end scripts -->
 
     </body>

@@ -1,20 +1,30 @@
+:root {
+    --vibe-height: 20;
+}
 
 .vibes {
     margin: auto;
+    height: 90px;
 }
 
 .navbar {
+    position: sticky;
+    top: 0;
     display: flex;
     max-width: 1000px;
-    margin: auto;
+    margin: 10px auto;
 
     justify-content: space-between;
+    border-left: 5px solid var(--bg-secondary);
+    background-color: var(--bg-primary-transparent);
+    z-index: 1000;
 }
 
 .navbar__title {
-    margin-left: 0.5em;
-    color: var(--text-color);
-    font:  var(--title-bg-font);
+    padding-left: 20px;
+    text-decoration: none;
+    color: var(--bg-secondary);
+    font:  var(--bg-font);
     font-weight: bold;
     letter-spacing: 0.3em;
 }
@@ -26,146 +36,164 @@
 }
 
 .navbar__options__option {
+    text-decoration: none;
     padding: 0.25em 0.5em;
     margin: 0 0.5em;
     border-radius: 0.3em;
-    color: var(--text-color);
-    font: var(--button-font);
-    background-color: var(--bg-color); 
+    color: var(--bg-secondary);
+    font: var(--button-font); 
 }
 
 .option-selected {
-    background-color: var(--text-color);
-    color: var(--bg-color);
+    background-color: var(--bg-secondary);
+    color: var(--bg-primary);
 }
 
 .navbar__options__option:hover {
-    background-color: var(--text-color); 
-    color: var(--bg-color);
+    background-color: var(--bg-secondary); 
+    color: var(--bg-primary);
     cursor: pointer;
 }
 
 .navbar--accent {
-    background-color: var(--text-color);
-    height: 10px; 
-    margin-bottom: 40px;
+    background-color: var(--bg-secondary);
+    height: 5px; 
+    box-shadow: 0 3px 0.5em 0.15em rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 37px;
+    z-index: 1000;
 }
 
-.about {
+.dash {
     display: flex;
-    justify-content: space-around;
+    padding: 20px;
+    justify-content: center;
     align-items: center;
-    height: 300px;
+}
+
+.quote {
+    background-color: var(--bg-secondary-transparent);
     max-width: 1000px;
-    margin: 10px auto 0px;
-    padding: 0 20px;
-    border-radius: var(--border-radius);
-    background-color: var(--text-color);
+    width: 100%;
+    margin: 100px auto;
+    padding: 40px 0;
+    text-align: center;
+    border-radius: 5px;
     box-shadow: 0 0 0.5em 0.15em rgba(0, 0, 0, 0.4);
 }
 
-.about__content {
-    width: 30%;
-
-    color: var(--bg-color);
-    font: var(--title-md-font);
-}
-
-.about__switcher {
-    display: inline-block;
-    margin: auto;
-}
-
-.about__switcher__button {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    border: 0.5em solid var(--bg-color);
-    margin: 0 10px;
-
-    background-color: var(--bg-color);
-
+.quote:hover {
+    background-color: var(--bg-secondary);
+    opacity: 100%;
     cursor: pointer;
 }
 
-.about__switcher-selected {
-    background-color: var(--text-color);
-    border-color: var(--bg-color);
+.quote__body {
+    font: var(--xl-font);
+    margin-bottom: 20px;
+    color: var(--text-primary);
 }
 
-.about__description {
-    width: 50%;
-    height: 80%;
-    border-radius: var(--border-radius);
-
-    background-color: var(--bg-color);
-    box-shadow: 0 0 0.5em 0.15em var(--text-color);
-
-    text-align: center;
+.quote__author {
+    font: var(--md-font);
+    font-style: italic;
+    color: var(--text-primary);
+    opacity: 75%;
 }
 
-.visualart {
-    height: 300px;
+.__segment {
     max-width: 1000px;
-    margin: 10px auto 0px;
-    padding: 0 20px;
-    border-radius: var(--border-radius);
-    background-color: var(--text-color);
+    margin: 0 auto 7em auto;
+    border-left: 5px solid var(--bg-secondary);
+    font: var(--md-font);
+    color: var(--bg-secondary);
 }
 
-.visualart__switch {
-    font-size: 16em;
-    font-family: monospace;
-    color: var(--bg-color);
+.__segment__title {
+    position: sticky;
+    top: 40px;
+    margin-left: 20px;
+    padding-top: 20px;
+    font: var(--xl-font);
+    background-color: var(--bg-primary-transparent);
+    z-index: 999;
 }
 
-.visualart__switch:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.visualart__centerpanel {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-}
-
-.visualart__content {
+.about__content {
     display: flex;
     align-items: center;
+    margin-bottom: 3em;
+}
+
+.about__content__description {
+    width: 45%;
+    margin-left: 20px;
+    font: var(--md-font);
+    padding-right: 30px;
+}
+
+.about__content__media {
+    height: 100px;
+    width: 200px;
+    padding: 20px;
+    background-color: var(--bg-secondary);
+    border-radius: 5px;
+    box-shadow: 0 0 0.5em 0.15em rgba(0, 0, 0, 0.4);
+
+    display: flex;
     justify-content: center;
-    height: 13em;
+    align-items: center;
+}
+
+.manifesto__description {
+    margin-left: 20px;
+    font: var(--md-font);
+    padding-right: 30px;
+}
+
+.manifesto__axioms {
+    position: relative;
     width: 50%;
-    border-radius: var(--border-radius);
-    
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    margin-left: 20px;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.05), var(--bg-primary));
+    border-radius: 2px;
 }
 
-.visualart__switcher {
-    display: block;
-    text-align: center;
-    margin: 0 auto;
-    background-color: var(--text-color);
+.manifesto__axioms__img {
+    opacity: 0.1;
+    position: absolute;
+    left: 150px;
+    top: 0;
+    width: 314px;
+    z-index: -1000;
 }
 
-.visualart__switcher__button {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    border: 0.5em solid var(--bg-color);
-    margin: 0 10px;
-
-    background-color: var(--bg-color);
-
-    cursor: pointer;
+.manifesto__axioms__slider {
+    display: flex;
+    align-items: center;
+    margin: 0 0 1em 0;
+    border: 2px solid var(--bg-secondary);
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 6px;
+    transition: width 0.5s;
 }
 
-.visualart__switcher-selected {
-    background-color: var(--text-color);
-    border-color: var(--bg-color);
+.manifesto__axioms__slider:hover {
+    width: 500px;
+}
+
+.manifesto__axioms__slider__media {
+    height: 50px;
+    width: 50px;
+    margin-right: 0;
+    padding: 20px;
+    background-color: var(--bg-secondary);
+    border-radius: 5px;
+    box-shadow: 0 0 0.5em 0.15em rgba(0, 0, 0, 0.4);
 }
